@@ -164,11 +164,6 @@ def second_side():
     return combine_sides(left, right)
 
 
-pyautogui.keyDown("win")
-pyautogui.keyDown("1")
-pyautogui.keyUp("win")
-pyautogui.keyUp("1")
-
 
 def check_and_create_directory(directory):
     """if directory not exist, create it"""
@@ -232,6 +227,13 @@ def main(directory):
     save_image(imgs[0], imgs[2]+" - [1]", directory)
     save_image(imgs[1], imgs[2]+" - [2]", directory)
 
+
+pyautogui.keyDown("win")
+pyautogui.keyDown("1")
+pyautogui.keyUp("win")
+pyautogui.keyUp("1")
+
 directory = "images/"
+
 for i in range(100):
     main(directory)
